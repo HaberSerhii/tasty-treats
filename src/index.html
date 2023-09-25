@@ -2,23 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./img/sprite/favicon.svg" />
+    <title>TastyTreats</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
+
   <body>
-    <load ="partials/header.html" />
+    <!-- HEADER -->
+    <load src="./partials/header.html" />
 
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+    <!-- HERO -->
+    <load src="./partials/main-page/hero.html" />
+    <div class="container recipe-wrapper">
+      <div class="category-container">
+        <!-- CATEGORIES -->
+        <load src="./partials/main-page/categories.html" />
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+        <!-- POPULAR -->
+        <load src="./partials/main-page/popular.html" />
+      </div>
+      <div class="section-container">
+        <!-- FILTERS -->
+        <load src="./partials/main-page/filters.html" />
 
-    <script type="module" src="/main.js"></script>
+        <!-- CARDS -->
+        <load src="./partials/main-page/cards.html" />
+      </div>
+    </div>
+
+    <!-- GIVE A RATING -->
+<load src="./partials/main-page/give-rating-modal.html" />
+
+  <!-- NEW ORDER MODAL -->
+  <load src="./partials/main-page/order-now-modal.html" />
+
+    <!-- FOOTER -->
+    <load src="./partials/footer.html" />
+
+    <!-- SCROLL UP -->
+    <load src="./partials/components/scroll-up.html" />
+
+    
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
