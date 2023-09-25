@@ -1,0 +1,240 @@
+@media screen and (min-width: 1280px) {
+  .section-container {
+    width: 846px;
+  }
+}
+.recipe-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .recipe-wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Карточка з рецептом */
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .cards-list {
+    column-gap: 16px;
+    row-gap: 16px;
+    margin-left: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards-list {
+    row-gap: 20px;
+    margin-left: 64px;
+  }
+}
+.recipes-card {
+  position: relative;
+  overflow: hidden;
+  height: 348px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .recipes-card {
+    width: calc((100% - 16px) / 2);
+    height: 264px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .recipes-card {
+    width: calc((100% - 32px) / 3);
+    height: 287px;
+  }
+}
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+}
+.recipes-img {
+  object-fit: cover;
+  height: 100%;
+  background-color: linear-gradient(
+    0.94deg,
+    rgba(5, 5, 5, 0.6) 4.82%,
+    rgba(5, 5, 5, 0) 108.72%
+  );
+}
+
+.card-description {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 16px;
+  padding-top: 16px;
+
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0.94deg,
+    rgba(5, 5, 5, 0.6) 4.82%,
+    rgba(5, 5, 5, 0) 108.72%
+  );
+}
+
+.like-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  transition: transform 3s;
+  /* background: transparent; */
+}
+.like-btn:hover {
+  transform: scale(1.1);
+  animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.icon-heart {
+  background-image: url('/img/sprite/heart.svg');
+  background-repeat: no-repeat;
+}
+
+.like-logo {
+  fill: transparent;
+}
+.like-btn.liked {
+  background-image: url('/img/sprite/liked-heart.svg');
+}
+.card-heading {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  margin-top: 214px;
+  margin-bottom: 8px;
+
+  user-select: none;
+
+  color: var(--modal-text-color);
+}
+@media screen and (min-width: 768px) {
+  .card-heading {
+    margin-top: 127px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-heading {
+    margin-top: 150px;
+    margin-bottom: 8px;
+  }
+}
+.text-container {
+  width: 303px;
+  max-height: 32px;
+  overflow: hidden;
+
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .text-container {
+    width: 208px;
+    height: 32px;
+  }
+}
+.card-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Встановлюємо кількість видимих рядків */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  user-select: none;
+
+  color: var(--modal-text-color);
+}
+.card-text::-webkit-scrollbar {
+  width: 0px;
+}
+/* рейтинг */
+.number-rating {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  user-select: none;
+
+  margin-right: 4px;
+
+  color: var(--modal-text-color);
+}
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+  width: 116px;
+}
+@media screen and (min-width: 768px) {
+  .rating {
+    width: 96px;
+  }
+}
+.reting-item {
+  width: 18px;
+  height: 18px;
+  background-image: url('/img/sprite/star-gray.svg');
+  background-repeat: no-repeat;
+}
+.reting-item.filled {
+  width: 18px;
+  height: 18px;
+  background-image: url('/img/sprite/star-yellow.svg');
+  background-repeat: no-repeat;
+}
+
+/* кнопка */
+.btn-see-recipe {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: var(--modal-text-color);
+  background-color: var(--secondary-brand-color);
+  border: none;
+
+  min-width: 89px;
+  min-height: 31px;
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
